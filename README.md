@@ -1,1 +1,1 @@
-This is for all the Treehouse work for the Code Louisville courses
+This is for all the Treehouse work for the Code Louisville courses.
