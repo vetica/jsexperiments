@@ -5,4 +5,9 @@ const ernie = {
     bark: function(){
         console.log('Woof!');
     }
-}
+};
+
+console.log(ernie['age']);
+console.log(ernie['breed']);
+
+ernie['bark']();
