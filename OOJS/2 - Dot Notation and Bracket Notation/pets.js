@@ -3,11 +3,8 @@ const ernie = {
     age: '1',
     breed: 'pug',
     bark: function(){
+        // eslint-disable-next-line no-console
         console.log('Woof!');
     }
 };
 
-console.log(ernie['age']);
-console.log(ernie['breed']);
-
-ernie['bark']();
