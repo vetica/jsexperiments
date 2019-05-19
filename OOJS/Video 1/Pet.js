@@ -15,7 +15,15 @@ class Pet {
     } else {
       return 'sleeping';
     }
+  }
 
+  set owner(owner) {
+    this._owner = owner;
+    console.log('setter called: ${owner}');
+  }
+
+  get owner() {
+    return this._owner;
   }
 
   speak() {
@@ -24,5 +32,25 @@ class Pet {
 
 }
 
+class Owner {
+  constructor(name, address) {
+    this.name = name;
+    this.addess = address;
+  }
+  set phone(phone) {
+    const phoneNormalized = phone.replace(/[^0-9]/g, '');
+    this._phone = phoneNormalized;
+  }
+  get phone() {
+    return this._phone;
+  }
+
+}
+
 const ernie = new Pet('dog', 1, 'pug', 'yip yip');
 const vera = new Pet('dog', 8, 'border collie', 'woof woof');
+
+ernie.owner = new Owner('Ashley', '123 Main Street');
+ernie.owner.phone = '(555) 555-5555';
+
+console.log(ernie.owner);
