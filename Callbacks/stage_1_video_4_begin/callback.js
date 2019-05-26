@@ -1,9 +1,7 @@
-function sayHello() {
-    console.log('Hello');
-}
-
-function executeCallback( callback ) {
+function executeCallback(callback) {
   callback();
 }
 
-executeCallback(sayHello);
+executeCallback(function () {
+  console.log('Hello');
+});
